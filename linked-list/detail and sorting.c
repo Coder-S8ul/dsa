@@ -8,6 +8,8 @@ struct node{
     struct node *next;
 };
 
+// adding new element
+
 void add(struct node **q, int num){
     struct node *temp, *r;
     temp = *q;
@@ -30,6 +32,8 @@ void add(struct node **q, int num){
     temp->next = r;
     
 } 
+
+//adding elements in accending order
 
 void add_acc(struct node **q, int num){
     struct node *r, *temp = *q;
@@ -54,6 +58,8 @@ void add_acc(struct node **q, int num){
     }
 }
 
+//displaying linked list
+
 void display(struct node *q){
     printf("\n");
     while(q != NULL){
@@ -61,6 +67,8 @@ void display(struct node *q){
         q = q->next;
     }
 }
+
+// reversing the linked list 
 
 void reverse(struct node **q){
     struct node *temp = *q, *r = NULL, *s;
@@ -73,6 +81,8 @@ void reverse(struct node **q){
     *q = r;
 }
 
+// counting the elements
+
 void count(struct node *q){
     cnt= 0;
     while(q != NULL){
@@ -80,6 +90,8 @@ void count(struct node *q){
         cnt++;
     }
 }
+
+// merging two linked lists
 
 void merge(struct node *p,struct node *q,struct node **s){
     struct node *z;
@@ -119,6 +131,8 @@ void merge(struct node *p,struct node *q,struct node **s){
     }
 }
 
+// sorting elements via selection sort
+
 void selection_sort(struct node *q){
     int i, j, temp, min;
     struct node *a, *b;
@@ -139,6 +153,8 @@ void selection_sort(struct node *q){
     }
 }
 
+// sorting elements via bubble sort
+
 void bubble_sort(struct node *q){
     int i, j, temp;
     struct node *a, *b;
@@ -157,6 +173,8 @@ void bubble_sort(struct node *q){
         }
     }
 }
+
+//main body to execute the program
 
 int main(){
 
